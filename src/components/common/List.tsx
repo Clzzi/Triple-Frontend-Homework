@@ -4,13 +4,13 @@ import { SerializedStyles } from '@emotion/react'
 
 type FlexDirection = 'row' | 'column'
 interface Props extends HTMLAttributes<HTMLUListElement> {
+  css?: SerializedStyles
   children: ReactNode
   direction: FlexDirection
-  css?: SerializedStyles
 }
 
 const StyledUl = styled.ul<{ direction: FlexDirection }>`
-  display: flex;
+  display: inline-flex;
   flex-direction: ${(props) => props.direction};
 `
 

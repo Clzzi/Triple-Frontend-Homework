@@ -1,6 +1,7 @@
 import { css } from '@emotion/react'
 
 import ColorPalette from '@/constants/color'
+import Bold from '@/styles/Bold'
 
 import PlayStoreAward from '../../assets/play-store2x.png'
 import AppStoreAward from '../../assets/badge-apple4x.png'
@@ -15,12 +16,21 @@ interface AwardItemProps {
 
 const AwardItemCustomStyle = css`
   width: 200px;
-  color: ${ColorPalette.black800};
   line-height: 22px;
-  & > img {
-    width: 64px;
-    height: 64px;
+  text-align: center;
+  align-items: center;
+  color: ${ColorPalette.black800};
+  justify-content: space-between;
+  & .awardImage {
+    width: 54px;
+    height: 54px;
   }
+`
+
+const AwardListCustomStyle = css`
+  width: 100%;
+  margin-top: 50px;
+  justify-content: space-between;
 `
 
 const AwardItem = ({
@@ -30,15 +40,17 @@ const AwardItem = ({
 }: AwardItemProps) => {
   return (
     <List direction="row" css={AwardItemCustomStyle}>
-      <img src={awardImageUrl} alt={awardImageAlt} />
-      <Text>{message}</Text>
+      <img className="awardImage" src={awardImageUrl} alt={awardImageAlt} />
+      <Text>
+        <Bold>{message}</Bold>
+      </Text>
     </List>
   )
 }
 
 const AwardList = () => {
   return (
-    <List direction="row">
+    <List direction="row" css={AwardListCustomStyle}>
       <AwardItem
         awardImageAlt="구글 플레이스토어 최우수상 수상"
         awardImageUrl={PlayStoreAward}
