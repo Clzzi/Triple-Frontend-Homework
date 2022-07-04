@@ -4,11 +4,11 @@ import { makeTransition } from '@/utils/transition'
 import { UseFadeInProps } from '@/types/fadeIn.type'
 
 const useFadeIn = ({ delay, duration, transform }: UseFadeInProps) => {
-  const element = useRef(null)
+  const elementRef = useRef(null)
 
   useEffect(() => {
-    if (element.current) {
-      const { style } = element.current
+    if (elementRef.current) {
+      const { style } = elementRef.current
       style.transition = makeTransition({
         duration,
         delay,
@@ -20,7 +20,7 @@ const useFadeIn = ({ delay, duration, transform }: UseFadeInProps) => {
   }, [delay, duration, transform])
 
   return {
-    ref: element,
+    ref: elementRef,
     style: { opacity: 0, transform: transform.to ? transform.to : null },
   }
 }
