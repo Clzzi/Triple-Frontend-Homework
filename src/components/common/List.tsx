@@ -1,10 +1,12 @@
 import React, { HTMLAttributes, ReactNode } from 'react'
 import styled from '@emotion/styled'
+import { SerializedStyles } from '@emotion/react'
 
 type FlexDirection = 'row' | 'column'
 interface Props extends HTMLAttributes<HTMLUListElement> {
   children: ReactNode
   direction: FlexDirection
+  css?: SerializedStyles
 }
 
 const StyledUl = styled.ul<{ direction: FlexDirection }>`

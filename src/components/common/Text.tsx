@@ -8,7 +8,7 @@ interface Props extends HTMLAttributes<HTMLSpanElement> {
 
 const StyledText = styled.span<{ fontSize: string }>`
   font-size: ${(props) => props.fontSize};
-  font-weight: 'normal';
+  font-weight: normal;
 `
 
 const Text = ({ fontSize = '14px', children, ...props }: Props) => {

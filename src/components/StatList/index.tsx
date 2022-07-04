@@ -1,3 +1,5 @@
+import { css } from '@emotion/react'
+
 import Bold from '@/styles/Bold'
 import Text from '@/components/common/Text'
 import ColorPalette from '@/constants/color'
@@ -22,8 +24,13 @@ const StatItem = ({ emphasizeStat, message }: StatItemProps) => {
 }
 
 const StatList = () => {
+  const StatListCustomStyle = css`
+    color: ${ColorPalette.black900};
+    text-align: start;
+  `
+
   return (
-    <List direction="column" style={{ color: ColorPalette.black900 }}>
+    <List direction="column" css={StatListCustomStyle}>
       <StatItem emphasizeStat="700명 명" message="의 여행자" />
       <StatItem emphasizeStat="100만 개" message="의 여행 리뷰" />
       <StatItem emphasizeStat="470만 개" message="의 여행 일정" />

@@ -5,9 +5,7 @@ interface Props extends LiHTMLAttributes<HTMLLIElement> {
   children: ReactNode
 }
 
-const StyledLi = styled.li`
-  color: blue;
-`
+const StyledLi = styled.li``
 
 const ListItem = ({ children, ...props }: Props) => {
   return <StyledLi {...props}>{children}</StyledLi>
