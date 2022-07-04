@@ -1,21 +1,17 @@
 import { ReactNode } from 'react'
 
 import useFadeIn from '@/hooks/useFadeIn'
-import { UseFadeInProps } from '@/types/fadeIn.type'
+import { UseFadeInParams } from '@/types/fadeIn.type'
 
-interface Props extends UseFadeInProps {
+interface Props extends UseFadeInParams {
   children: ReactNode
 }
 
-const FadeIn = ({ children, delay, duration }: Props) => {
-  const transformOption = {
-    from: 'translateY(0px)',
-    to: 'translateY(20px)',
-  }
+const FadeIn = ({ children, delay, duration, transform }: Props) => {
   const ref = useFadeIn({
     duration,
     delay,
-    transform: transformOption,
+    transform,
   })
   return <div {...ref}>{children}</div>
 }

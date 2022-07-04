@@ -1,4 +1,9 @@
-export type TimingFn = 'ease' | 'ease-in-out' | 'ease-in' | 'ease-out'
+export type TransitionTimingOptions =
+  | 'ease'
+  | 'ease-in-out'
+  | 'ease-in'
+  | 'ease-out'
+  | 'linear'
 
 export interface AnimationTimeOptions {
   duration: number

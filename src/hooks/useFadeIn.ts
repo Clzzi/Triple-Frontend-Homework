@@ -1,10 +1,10 @@
-import { useEffect, useRef } from 'react'
+import { MutableRefObject, useEffect, useRef } from 'react'
 
 import { makeTransition } from '@/utils/transition'
-import { UseFadeInProps } from '@/types/fadeIn.type'
+import { UseFadeInParams } from '@/types/fadeIn.type'
 
-const useFadeIn = ({ delay, duration, transform }: UseFadeInProps) => {
-  const elementRef = useRef(null)
+const useFadeIn = ({ delay, duration, transform }: UseFadeInParams) => {
+  const elementRef: MutableRefObject<HTMLDivElement> = useRef(null)
 
   useEffect(() => {
     if (elementRef.current) {
@@ -12,7 +12,7 @@ const useFadeIn = ({ delay, duration, transform }: UseFadeInProps) => {
       style.transition = makeTransition({
         duration,
         delay,
-        timingFn: 'ease-in-out',
+        transitionTimingOption: 'ease-in-out',
       })
       style.transform = transform.from
       style.opacity = '1'
