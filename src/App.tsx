@@ -5,6 +5,7 @@ import StatList from './components/StatList'
 import AwardList from './components/AwardList'
 import Layout from './components/common/Layout'
 import ApplicationLogo from './components/ApplicationLogo'
+import FadeIn from './components/common/FadeIn'
 
 const StatContainer = styled.div`
   height: auto;
@@ -26,13 +27,20 @@ const StatWithAwardBox = styled.div`
 `
 
 const App = () => {
+  const ANIMATION_DEFAULT_DURATOIN = 700
   return (
     <Layout>
       <StatContainer>
-        <ApplicationLogo />
+        <FadeIn delay={100} duration={ANIMATION_DEFAULT_DURATOIN}>
+          <ApplicationLogo />
+        </FadeIn>
         <StatWithAwardBox>
-          <StatList />
-          <AwardList />
+          <FadeIn delay={200} duration={ANIMATION_DEFAULT_DURATOIN}>
+            <StatList />
+          </FadeIn>
+          <FadeIn delay={300} duration={ANIMATION_DEFAULT_DURATOIN}>
+            <AwardList />
+          </FadeIn>
         </StatWithAwardBox>
       </StatContainer>
     </Layout>
