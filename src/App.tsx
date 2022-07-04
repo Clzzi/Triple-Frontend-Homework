@@ -1,7 +1,8 @@
 import '@/styles/reset.css'
+import StatList from './components/StatList'
 
 const App = () => {
-  return <div>Triple-Frontend-Homework</div>
+  return <StatList />
 }
 
 export default App
