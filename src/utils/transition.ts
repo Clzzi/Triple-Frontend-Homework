@@ -1,13 +1,16 @@
-import { AnimationTimeOptions, TimingFn } from '@/types/animation.type'
+import {
+  AnimationTimeOptions,
+  TransitionTimingOptions,
+} from '@/types/animation.type'
 
-interface Props extends AnimationTimeOptions {
-  timingFn: TimingFn
+interface Params extends AnimationTimeOptions {
+  transitionTimingOption: TransitionTimingOptions
 }
 
 export const makeTransition = ({
   duration,
   delay,
-  timingFn,
-}: Props): string => {
-  return `all ${duration}ms ${timingFn} ${delay}ms`
+  transitionTimingOption,
+}: Params): string => {
+  return `all ${duration}ms ${transitionTimingOption} ${delay}ms`
 }
