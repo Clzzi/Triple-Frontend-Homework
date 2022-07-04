@@ -2,13 +2,14 @@ import styled from '@emotion/styled'
 import { HTMLAttributes, ReactNode } from 'react'
 
 interface Props extends HTMLAttributes<HTMLSpanElement> {
-  children: ReactNode
   fontSize?: string
+  children: ReactNode
 }
 
 const StyledText = styled.span<{ fontSize: string }>`
-  font-size: ${(props) => props.fontSize};
   font-weight: normal;
+  word-break: keep-all;
+  font-size: ${(props) => props.fontSize};
 `
 
 const Text = ({ fontSize = '14px', children, ...props }: Props) => {
