@@ -24,6 +24,7 @@ const StatWithAwardBox = styled.div`
   display: flex;
   flex-direction: column;
   margin-bottom: 84px;
+  text-align: start;
 `
 
 const App = () => {
@@ -31,14 +32,14 @@ const App = () => {
   return (
     <Layout>
       <StatContainer>
-        <FadeIn delay={100} duration={ANIMATION_DEFAULT_DURATOIN}>
+        <FadeIn delay={0} duration={ANIMATION_DEFAULT_DURATOIN}>
           <ApplicationLogo />
         </FadeIn>
         <StatWithAwardBox>
-          <FadeIn delay={200} duration={ANIMATION_DEFAULT_DURATOIN}>
+          <FadeIn delay={100} duration={ANIMATION_DEFAULT_DURATOIN}>
             <StatList />
           </FadeIn>
-          <FadeIn delay={300} duration={ANIMATION_DEFAULT_DURATOIN}>
+          <FadeIn delay={200} duration={ANIMATION_DEFAULT_DURATOIN}>
             <AwardList />
           </FadeIn>
         </StatWithAwardBox>
