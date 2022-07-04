@@ -1,7 +1,7 @@
 import styled from '@emotion/styled'
-import React, { ReactNode } from 'react'
+import React, { LiHTMLAttributes, ReactNode } from 'react'
 
-interface Props {
+interface Props extends LiHTMLAttributes<HTMLLIElement> {
   children: ReactNode
 }
 

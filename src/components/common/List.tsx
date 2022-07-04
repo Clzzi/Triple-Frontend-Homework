@@ -1,8 +1,8 @@
-import React, { ReactNode } from 'react'
+import React, { HTMLAttributes, ReactNode } from 'react'
 import styled from '@emotion/styled'
 
 type FlexDirection = 'row' | 'column'
-interface Props {
+interface Props extends HTMLAttributes<HTMLUListElement> {
   children: ReactNode
   direction: FlexDirection
 }
