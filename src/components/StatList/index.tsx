@@ -12,6 +12,11 @@ interface StatItemProps {
   message: string
 }
 
+const StatListCustomStyle = css`
+  color: ${ColorPalette.black900};
+  text-align: start;
+`
+
 const StatItem = ({ emphasizeStat, message }: StatItemProps) => {
   return (
     <ListItem>
@@ -24,11 +29,6 @@ const StatItem = ({ emphasizeStat, message }: StatItemProps) => {
 }
 
 const StatList = () => {
-  const StatListCustomStyle = css`
-    color: ${ColorPalette.black900};
-    text-align: start;
-  `
-
   return (
     <List direction="column" css={StatListCustomStyle}>
       <StatItem emphasizeStat="700명 명" message="의 여행자" />
