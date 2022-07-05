@@ -16,4 +16,4 @@ $ git clone https://github.com/Clzzi/Triple-Frontend-Homework.git
 
 - **Emotion**: 일반적인 CSS로 스타일링하는것보다 Css in Js 라이브러리를 사용하여 스타일링하는 방식이 장점이 많기때문에 사용했습니다.
 
-- **Webpack**: CRA(Create-React-App)방식으로 프로젝트를 만들어도 되지만 이번 사전과제처럼 규모가 크지 않은 프로젝트에선 CRA로 프로젝트를 만드는것은 비효율적이라고 판단하여, Webpack을 이용해 필요한 부분만 쉽게 번들링할 수 있도록 하였다.
+- **Webpack**: CRA(Create-React-App)방식으로 프로젝트를 만들어도 되지만 이번 사전과제처럼 규모가 크지 않은 프로젝트에선 CRA로 프로젝트를 만드는것은 비효율적이라고 판단하여, Webpack을 이용해 필요한 부분만 쉽게 번들링할 수 있도록 하였습니다.
