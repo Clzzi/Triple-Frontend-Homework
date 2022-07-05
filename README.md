@@ -2,15 +2,15 @@
 
 ### 프로젝트 실행 방법
 
-1. 현재 레포지토리(triple-frontend-homework)를 git clone 받는다.
+1. 현재 레포지토리(triple-frontend-homework)를 git clone 받습니다.
 
 ```bash
 $ git clone https://github.com/Clzzi/Triple-Frontend-Homework.git
 ```
 
-2. 터미널에서 클론받은 프로젝트 경로로 들어와 `yarn` 또는 `npm i` 커맨드를 입력한다.
+2. 터미널에서 클론받은 프로젝트 경로로 들어와서 `yarn` 또는 `npm i` 커맨드를 입력합니다.
 
-3. 프로젝트 실행에 필요한 의존성들이 모두 설치되었다면 `yarn start` 또는 `npm run start`를 입력한다.
+3. 프로젝트 실행에 필요한 의존성들이 모두 설치되었다면 `yarn start` 또는 `npm run start`를 입력합니다.
 
 ### 사용한 기술과 선택한 이유
 
