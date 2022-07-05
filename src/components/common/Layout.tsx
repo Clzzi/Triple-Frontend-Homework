@@ -3,6 +3,7 @@ import styled from '@emotion/styled'
 
 const StyledSection = styled.section`
   width: 100vw;
+  min-width: 1200px;
   height: 552px;
   display: flex;
   flex-direction: row;

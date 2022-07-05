@@ -11,7 +11,6 @@ import makeTranslate from './utils/translate'
 const StatContainer = styled.div`
   height: auto;
   width: 1040px;
-  min-width: 1040px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
